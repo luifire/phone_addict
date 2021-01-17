@@ -1,0 +1,4 @@
+Broadcast Notsignal Absetzen
+Notsignal aus Service absetzten
+Aufräumen
+Brauche ich alle Threads

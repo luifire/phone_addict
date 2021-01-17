@@ -1,0 +1,16 @@
+\adb.exe devices    -- get devices
+\adb.exe -s a65fca727cf4 shell run-as com.luifire.phoneaddict1 chmod -R 777 /data/data/com.luifire.phoneaddict1/databases && adb -s a65fca727cf4 shell "mkdir -p /sdcard/tempDB" && adb -s a65fca727cf4 shell "cp -r /data/data/com.luifire.phoneaddict1/databases/ /sdcard/tempDB/." && adb -s a65fca727cf4 pull sdcard/tempDB/ && adb -s a65fca727cf4 shell "rm -r /sdcard/tempDB/*"
+
+
+sqlite3 navigate to *.db
+
+.tables 
+.schema TABLE
+
+C:\Users\LuiFire\AppData\Local\Android\Sdk\platform-tools
+
+.\adb.exe -s a65fca727cf4 shell run-as com.luifire.phoneaddict1 chmod -R 777 /data/data/com.luifire.phoneaddict1/databases 
+.\adb.exe -s a65fca727cf4 shell "mkdir -p /sdcard/tempDB" 
+.\adb.exe -s a65fca727cf4 shell run-as com.luifire.phoneaddict1 "cp -r /data/data/com.luifire.phoneaddict1/databases/ /sdcard/tempDB/." 
+.\adb.exe -s a65fca727cf4 pull sdcard/tempDB/ 
+.\adb.exe -s a65fca727cf4 shell "rm -r /sdcard/tempDB/*"

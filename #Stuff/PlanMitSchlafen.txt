@@ -1,0 +1,43 @@
+CREATE VIEW BedTime (ID INTEGER PRIMARY KEY, SleepTime, Diff) AS 
+SELECT TIME(a.ScreenOn - b.ScreenOff + 0.5), a.ScreenOn - b.ScreenOff + 0.5 AS Diff FROM OnOffLog a
+INNER JOIN OnOffLog b ON a.ID = (b.ID + 1)
+WHERE a.ScreenOn - b.ScreenOff > 0.0833333;
+
+SELECT * FROM BedTime b1
+INNER JOIN BedTime b2 ON 
+
+
+SELECT a.ScreenOff - JULIANDAY(DATE(a.ScreenOff - 4.0/24)), a.Id AS ID, TIME(a.ScreenOn - b.ScreenOff + 0.5) AS BedTime, a.ScreenOn - b.ScreenOff AS Diff FROM OnOffLog a
+INNER JOIN OnOffLog b ON a.ID = (b.ID + 1)
+WHERE a.ScreenOn - b.ScreenOff > 0.0833333
+
+
+einstellen wie viel früher man was gesagt bekommen will.
+Diese Stunde dann auch mit beim schlafen einbauen
+
+über wie lange soll dieser durchschnitt gemessen werden? immer + 1 monat
+
+alle 24 wird nur einmal geschlafen
+
+finde eins, das nächste muss mindestens 18h entfernt sein
+
+
+a.screenoff
+WHERE diffWithNext > 2h and diffWithLast > 6h
+
+-----------
+6:00
+3:00
+22:00
+-----
+6:00
+1:00
+22:00
+-----
+6:00
+1:00
+---
+7:00
+23:00
+22:00
+

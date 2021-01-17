@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PhoneAddict</string>
+    <string name="title_home">Log</string>
+    <string name="title_dashboard">Stats</string>
+    <string name="title_notifications">###</string>
+    <string name="Loading">Loading...</string>
+
+    <string name="AvgOnTime">Ø on time</string>
+    <string name="AvgOffTime">Ø off time</string>
+    <string name="AvgOffTimeNoSleep">Ø off time - sleep (7h)</string>
+    <string name="Separator">-------------------------</string>
+    <string name="AvgPhoneOn">Ø turned on </string>
+    <string name="StdDev">StdDev</string>
+    <string name="AbsDev">Avg Abs Dev</string>
+    <string name="OnToday">turned on today</string>
+    <string name="OnTimeToday">time On today</string>
+    <string name="TotalPhoneOn">total on</string>
+    <string name="DayCount">day count</string>
+
+    <string name="OffTime">OffTime</string>
+    <string name="OnTime">OnTime</string>
+    <string name="On">On</string>
+    <string name="Off">Off</string>
+
+
+</resources>

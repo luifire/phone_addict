@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.luifire.phoneaddict1.MainActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/Logging"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+
+        <TableLayout
+            android:id="@+id/OnOffTable"
+            android:layout_width="match_parent"
+            android:layout_height="408dp"
+            android:onClick="onClickTableLayout">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--
+                                <TextView
+                                    android:id="@+id/CaptionDate"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+                -->
+                <TextView
+                    style="@style/LogCaption"
+                    android:text="@string/On" />
+
+                <TextView
+                    style="@style/LogCaption"
+                    android:text="@string/Off" />
+
+                <TextView
+                    style="@style/LogCaption"
+                    android:text="@string/OnTime" />
+
+                <TextView
+                    style="@style/LogCaption"
+                    android:text="@string/OffTime" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <!-- ######### Stats ############ -->
+    <TableLayout
+        android:id="@+id/Stats"
+        android:layout_width="match_parent"
+        android:layout_height="408dp"
+        android:visibility="gone">
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/AvgOnTime" />
+
+            <TextView
+                android:id="@+id/PhoneOn"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/AvgOffTime" />
+
+            <TextView
+                android:id="@+id/PhoneOff"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/AvgOffTimeNoSleep" />
+
+            <TextView
+                android:id="@+id/OffWithoutSleep"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/Separator" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/AvgPhoneOn" />
+
+            <TextView
+                android:id="@+id/TurnOn"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/StdDev" />
+
+            <TextView
+                android:id="@+id/StdDevPhoneOn"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/AbsDev" />
+
+            <TextView
+                android:id="@+id/AvgAbsDev"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/Separator" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/OnToday" />
+
+            <TextView
+                android:id="@+id/TurnOnToday"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/OnTimeToday" />
+
+            <TextView
+                android:id="@+id/TimeOnToday"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/Separator" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/TotalPhoneOn" />
+
+            <TextView
+                android:id="@+id/TotalPhoneOn"
+                style="@style/StatsValue" />
+        </TableRow>
+
+        <TableRow style="@style/StdTableRow">
+
+            <TextView
+                style="@style/StatsText"
+                android:text="@string/DayCount" />
+
+            <TextView
+                android:id="@+id/TotalDayCount"
+                style="@style/StatsValue" />
+        </TableRow>
+    </TableLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>
